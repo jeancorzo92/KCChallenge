@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">KCChallenge</string>
     <string name="contact_list_activity_title">Contacts</string>
+    <string name="star_emoji">⭐</string>
+    <string name="favorite_contacts">Favorite contacts</string>
+    <string name="other_contacts">Other contacts</string>
 </resources>
