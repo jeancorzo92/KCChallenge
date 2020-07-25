@@ -10,4 +10,16 @@ data class Address(
     val state: String,
     val country: String,
     val zipCode: String
-) : Parcelable
+) : Parcelable {
+    fun isBlank(): Boolean {
+        return street.isBlank()
+                && city.isBlank()
+                && state.isBlank()
+                && country.isBlank()
+                && zipCode.isBlank()
+    }
+
+    fun isNotBlank(): Boolean {
+        return !isBlank()
+    }
+}

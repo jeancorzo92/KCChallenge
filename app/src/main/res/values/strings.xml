@@ -2,6 +2,18 @@
     <string name="app_name">KCChallenge</string>
     <string name="contact_list_activity_title">Contacts</string>
     <string name="star_emoji">⭐</string>
+    <string name="blank"> </string>
     <string name="favorite_contacts">Favorite contacts</string>
     <string name="other_contacts">Other contacts</string>
+    <string name="contact_phone_work_label">Work</string>
+    <string name="contact_phone_home_label">Home</string>
+    <string name="contact_phone_mobile_label">Mobile</string>
+    <string name="contact_phone_label">Phone</string>
+    <string name="contact_address_label">Address</string>
+    <string name="contact_birthdate_label">Birthdate</string>
+    <string name="contact_email_label">Email</string>
+    <string name="contact_detail_item_label_format">%s:</string>
+    <string name="contact_details">Contact details</string>
+    <string name="favorite">Favorite</string>
+    <string name="error_message">An unexpected error occurred.\nPlease try again later.</string>
 </resources>

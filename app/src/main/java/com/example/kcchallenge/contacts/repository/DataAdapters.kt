@@ -14,34 +14,42 @@ object ContactAdapter {
             contactDTO.name,
             contactDTO.companyName ?: "",
             contactDTO.isFavorite,
-            contactDTO.smallImageURL,
-            contactDTO.largeImageURL,
-            contactDTO.emailAddress,
+            contactDTO.smallImageURL ?: "",
+            contactDTO.largeImageURL ?: "",
+            contactDTO.emailAddress ?: "",
             contactDTO.birthDate,
-            PhoneAdapter.toModel(contactDTO.phone),
+            PhoneAdapter.toModel(contactDTO.phone) ,
             AddressAdapter.toModel(contactDTO.address)
         )
     }
 }
 
 object PhoneAdapter {
-    fun toModel(phoneDTO: PhoneDTO) : Phone {
-        return Phone(
-            phoneDTO.work ?: "",
-            phoneDTO.home ?: "",
-            phoneDTO.mobile ?: ""
-        )
+    fun toModel(phoneDTO: PhoneDTO?) : Phone {
+        return if (phoneDTO == null) {
+            Phone("", "", "")
+        } else {
+            Phone(
+                phoneDTO.work ?: "",
+                phoneDTO.home ?: "",
+                phoneDTO.mobile ?: ""
+            )
+        }
     }
 }
 
 object AddressAdapter {
-    fun toModel(addressDTO: AddressDTO) : Address {
-        return Address(
-            addressDTO.street,
-            addressDTO.city,
-            addressDTO.state,
-            addressDTO.country,
-            addressDTO.zipCode
-        )
+    fun toModel(addressDTO: AddressDTO?) : Address {
+        return if (addressDTO == null) {
+            Address("", "", "", "", "")
+        } else {
+            Address(
+                addressDTO.street ?: "",
+                addressDTO.city ?: "",
+                addressDTO.state ?: "",
+                addressDTO.country ?: "",
+                addressDTO.zipCode ?: ""
+            )
+        }
     }
 }

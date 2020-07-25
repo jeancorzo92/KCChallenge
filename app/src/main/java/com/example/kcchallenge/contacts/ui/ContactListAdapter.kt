@@ -69,13 +69,11 @@ class ContactListAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     inner class ContactViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(contact: Contact) {
-            with(itemView) {
-                contact_name.text = contact.name
-                contact_company_name.text = contact.companyName
-                contact_favorite.text = if (contact.isFavorite) itemView.resources.getString(R.string.star_emoji) else ""
-                contact_image.setImageURI(contact.smallImageURL)
-                setOnClickListener { contactClickListener(contact) }
-            }
+            itemView.contact_name.text = contact.name
+            itemView.contact_company_name.text = contact.companyName
+            itemView.contact_favorite.text = if (contact.isFavorite) itemView.resources.getString(R.string.star_emoji) else ""
+            itemView.contact_image.setImageURI(contact.smallImageURL)
+            itemView.setOnClickListener { contactClickListener(contact) }
         }
     }
 }

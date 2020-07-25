@@ -13,15 +13,15 @@ data class ContactDTO(
     @SerializedName("isFavorite")
     val isFavorite: Boolean,
     @SerializedName("smallImageURL")
-    val smallImageURL: String,
+    val smallImageURL: String?,
     @SerializedName("largeImageURL")
-    val largeImageURL: String,
+    val largeImageURL: String?,
     @SerializedName("emailAddress")
-    val emailAddress: String,
+    val emailAddress: String?,
     @SerializedName("birthdate")
-    val birthDate: Date,
+    val birthDate: Date?,
     @SerializedName("phone")
-    val phone: PhoneDTO,
+    val phone: PhoneDTO?,
     @SerializedName("address")
-    val address: AddressDTO
+    val address: AddressDTO?
 )
